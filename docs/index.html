@@ -3,37 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Submission Form</title>
+    <title>Allowance Submission Form</title>
     <link rel="icon" type="image/png" href="https://img.icons8.com/ios-glyphs/30/us-dollar-circled--v1.png"/>     
     <link href="output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-   
+<body>  
 <div class="font-nunito min-h-screen bg-gradient-to-bl from-slate-50 via-purple-100 to-purple-300">
+    
     <div class="container lg:w-1/2 mx-auto py-12 lg:py-20">
         <div class="bg-white shadow-xl">
+            <!--Tab-->
             <ul class="flex">
                 <li class="flex-auto text-center">
-                    <a href="" class="font-semibold block border-b-2 border-purple-500 px-7 pb-3.5 pt-4 lg:text-xs uppercase leading-tight text-neutral-500 hover:border-transparent hover:bg-purple-400 hover:text-white">FORM</a>
+                    <a href="" class="font-bold block border-b-2 border-purple-500 px-7 pb-3.5 pt-4 lg:text-xs uppercase leading-tight text-neutral-500 hover:border-transparent hover:bg-purple-400 hover:text-white">FORM</a>
                 </li>
                 <li class="flex-auto text-center">
-                    <a href="" class="font-semibold block border-b-2 border-purple-500 px-7 pb-3.5 pt-4 lg:text-xs uppercase leading-tight text-neutral-500 hover:border-transparent hover:bg-purple-400 hover:text-white">TABLE</a>
+                    <a href="" class="font-bold block border-b-2 border-purple-500 px-7 pb-3.5 pt-4 lg:text-xs uppercase leading-tight text-neutral-500 hover:border-transparent hover:bg-purple-400 hover:text-white">TABLE</a>
                 </li>
             </ul>
-            <div id="" class="p-4">
-                
-            </div>
-            <div id="" class="p-4 hidden">
-                
+            <!--Content-->
+            <div class="my-6">
+                <!--Form-->
+                <div id="" class="p-4">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                          Name
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline">
+                        <!--<p class="text-red-500 text-xs italic">Applicant's name must be over 10 characters.</p>-->
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                          Age
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline">
+                        <!--<p class="text-red-500 text-xs italic">Applicants must be 25 and up.</p>-->
+                    </div>
+                    <div class="mb-9">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">
+                          Allowance Amount
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline">
+                        <!--<p class="text-red-500 text-xs italic">The minimum amount must be 100000.</p>-->
+                        <!--<p class="text-red-500 text-xs italic">The maximum amount must be 1000000.</p>-->
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            REGISTER
+                        </button>
+                    </div>
+                </div>
+                <!--Table-->
+                <div id="" class="p-4">
+                    <table class="table-auto min-w-full mb-12 text-left text-sm font-light text-neutral-500">
+                        <thead class="border-b font-medium border-neutral-500">
+                          <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Allowance</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="border-b border-neutral-500">
+                            <td class="whitespace-nowrap py-9 md:py-4">Markus Barkus</td>
+                            <td class="whitespace-nowrap py-9 md:py-4">Ot</td>
+                            <td class="whitespace-nowrap py-9 md:py-4">234142341243</td>
+                          </tr>
+                          <tr class="border-b border-neutral-500 py-12">
+                            <td class="whitespace-nowrap py-9 md:py-4">Markus Barkus</td>
+                            <td class="whitespace-nowrap py-9 md:py-4">Ot</td>
+                            <td class="whitespace-nowrap py-9 md:py-4">234142341243</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <p class="justify text-center text-neutral-500 py-5">
+                        Resume : The average applicant has an allowance of [nilai rata rata uang sangu] with the average age of [nilai rata rata umur].
+                    </p>   
+                </div>
             </div>
         </div>
     </div>
+
 </div>
-
 <script src="script.js"></script>   
-
 </body>
 </html>
 
