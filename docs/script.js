@@ -23,35 +23,42 @@ class Applicant{
         this.averageParagraph = document.getElementById('average');
     
         this.registerButton.addEventListener("click", this.register.bind(this));
-      }
-
-    validateInputs(name, age, allowance) {
-
-        if (name.length < 9) {
-        this.errorMessage.textContent = "Applicant's name must be at least 10 characters.";
-        return false;
-        }
-
-        if (age < 24) {
-        this.errorMessage.textContent = "Applicants must be 25 years or older.";
-        return false;
-        }
-
-        if (allowance < 9999 || allowance > 1000001) {
-        this.errorMessage.textContent = "Allowance amount must be between 100,000 and 1,000,000.";
-        return false;
-        }
-
-        this.errorMessage.textContent = '';
-        return true;
     }
+
+
+    async validateInputs(name, age, allowance) {
+        try {
+          if (name.length < 9) {
+            throw new Error("Applicant's name must be at least 10 characters.");
+          }
     
-    register() {
+          if (age < 24) {
+            throw new Error("Applicants must be 25 years or older.");
+          }
+    
+          if (allowance < 99999 || allowance > 1000001) {
+            throw new Error("Allowance amount must be between 100,000 and 1,000,000.");
+          }
+    
+          this.errorMessage.textContent = "";
+          return true;
+          
+        } catch (error) {
+          this.showErrorMessage(error.message);
+          return false;
+        }
+      }
+    
+    showErrorMessage(message) {
+        this.errorMessage.textContent = message;
+      }
+    
+    async register() {
         const name = this.applicantName.value;
         const age = parseInt(this.applicantAge.value);
         const allowance = parseInt(this.applicantAllowance.value);
     
-        if (this.validateInputs(name, age, allowance)) {
+        if (await this.validateInputs(name, age, allowance)) {
           const applicant = [name, age, allowance];
           this.applicants.push(applicant);
     
@@ -62,15 +69,15 @@ class Applicant{
           cell1.textContent = name;
           cell2.textContent = age;
           cell3.textContent = allowance;
-            
-          this.findAverage()
-
-          this.applicantName.value = '';
-          this.applicantAge.value = '';
-          this.applicantAllowance.value = '';
+    
+          this.findAverage();
+    
+          this.applicantName.value = "";
+          this.applicantAge.value = "";
+          this.applicantAllowance.value = "";
         }
-      }
-
+    }
+    
     findAverage(){
         const sumAge = this.applicants.reduce((sum, applicant) => sum + applicant[1], 0);
         const sumAllowance = this.applicants.reduce((sum, applicant) => sum + applicant[2], 0);
