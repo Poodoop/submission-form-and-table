@@ -578,6 +578,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -740,6 +745,11 @@ video {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-3 {

@@ -31,32 +31,33 @@
                         <label class="block text-gray-700 text-sm font-bold mb-2">
                           Enter Name:
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline">
-                        <!--<p class="text-red-500 text-xs italic">Applicant's name must be over 10 characters.</p>-->
+                        <input id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" required>
+                        <!--Applicant's name must be over 10 characters.-->
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2">
                           Enter Age:
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline">
-                        <!--<p class="text-red-500 text-xs italic">Applicants must be 25 and up.</p>-->
+                        <input id="age" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" required>
+                        <!--Applicants must be 25 and up.-->
                     </div>
                     <div class="mb-9">
                         <label class="block text-gray-700 text-sm font-bold mb-2">
                           Enter Allowance Amount:
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline">
-                        <!--<p class="text-red-500 text-xs italic">The amount must be between 100000 and 1 million.</p>-->
+                        <input id="allowance" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" required>
+                        <!--The amount must be between 100000 and 1 million.-->
                     </div>
+                    <div id="error-message" class="text-red-500 py-4"></div>
                     <div class="flex items-center justify-between">
-                        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <button id="register" type="submit" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                             REGISTER
                         </button>
                     </div>
                 </div>
                 <!--Table-->
                 <div id="tab2" class="tab-pane p-4 hidden">
-                    <table class="table-auto min-w-full mb-12 text-left text-sm font-light text-gray-700">
+                    <table id="table" class="table-auto min-w-full mb-12 text-left text-sm font-light text-gray-700">
                         <thead class="border-b font-medium border-neutral-500">
                           <tr>
                             <th>Name</th>
@@ -64,12 +65,7 @@
                             <th>Allowance</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr class="border-b border-neutral-500">
-                            <td class="whitespace-nowrap py-9 md:py-4">Markus Barkus</td>
-                            <td class="whitespace-nowrap py-9 md:py-4">Ot</td>
-                            <td class="whitespace-nowrap py-9 md:py-4">234142341243</td>
-                          </tr>
+                        <tbody class="border-b border-neutral-500">
                         </tbody>
                       </table>
                     <p class="justify text-center text-gray-700 py-5">
